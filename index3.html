@@ -8,8 +8,28 @@
   <title>Experiance</title>
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
     integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+  <link href="./style3.css" rel="stylesheet">
   <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
   <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+  <script>
+    $(function () {
+      $("#dialog").dialog({
+        autoOpen: false,
+        show: {
+          effect: "blind",
+          duration: 1000
+        },
+        hide: {
+          effect: "explode",
+          duration: 1000
+        }
+      });
+
+      $("#opener").on("click", function () {
+        $("#dialog").dialog("open");
+      });
+    });
+  </script>
 </head>
 
 <body class="bg-danger">
@@ -33,9 +53,42 @@
         </ul>
       </div>
     </div>
-
+    <h2><u>Experiance</u></h2>
+    <div class="row">
+      <div class="col-md-12">
+        <h2>Web Administator</h2>
+        <p><b>Company:</b> InterGlobal Forests</p>
+        <div id="dialog" title="Basic dialog">
+          <p>As a Website Administator, I take requests on changes the company would like make to their website. This
+            could be anything from adding or deleting infromation, adding new products, or adding new picture from
+            expos or showings.</p>
+        </div>
+        <button id="opener">Learn What I Do for Them</button>
+      </div>
+    </div>
+    <br>
+    <br>
+    <br>
+    <h2><u>Projects</u></h2>
+    <h6>Click on images to go to Projects</h6>
     <div class="row">
 
+      <div class="col-md-3 text-center p-3">
+        <a href="https://larrabee55.github.io/API-buttons/" target="_blank"><img src="./Images/API.jpeg" width="200"
+            height="200"></a>
+      </div>
+      <div class="col-md-3 text-center p-3">
+        <a href="https://larrabee55.github.io/Word-Guess-Game/" target="_blank"><img src="./Images/javascript.png"
+            width="200" height="200"></a>
+      </div>
+      <div class="col-md-3 text-center p-3">
+        <a href="https://larrabee55.github.io/unit-4-game/" target="_blank"><img src="./Images/jquery.png" width="200"
+            height="200"></a>
+      </div>
+      <div class="col-md-3 text-center p-3">
+        <a href="http://speakeasydrinks.herokuapp.com/" target="_blank"><img src="./Images/drink.JPEG" width="200"
+            height="200"></a>
+      </div>
     </div>
   </div>
 </body>
